@@ -8,7 +8,7 @@ namespace UDPNumberSender
 {
     class UDPNumberSender
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             int number = 0;
 
