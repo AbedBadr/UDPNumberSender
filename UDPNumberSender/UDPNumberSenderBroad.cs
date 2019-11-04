@@ -14,6 +14,15 @@ namespace UDPNumberSender
 
             IPAddress ip = IPAddress.Parse("127.0.0.1");
             UdpClient udpSender = new UdpClient();
+
+            udpSender.EnableBroadcast = true;
+
+            IPEndPoint remoteIpEndPoint = new IPEndPoint(ip, 9999);
+
+            while (true)
+            {
+                
+            }
         }
     }
 }
