@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 
 namespace UDPNumberSender
 {
@@ -17,11 +18,17 @@ namespace UDPNumberSender
 
             udpSender.EnableBroadcast = true;
 
-            IPEndPoint remoteIpEndPoint = new IPEndPoint(ip, 9999);
+            IPEndPoint remoteIpEndPoint = new IPEndPoint(IPAddress.Broadcast, 9999);
 
             while (true)
             {
-                
+                Console.WriteLine(number);
+                Byte[] sendBytes = Encoding.ASCII.GetBytes("The number is: " + number);
+
+                udpSender.Send(sendBytes, sendBytes.Length, remoteIpEndPoint);
+                number++;
+
+                Thread.Sleep(100);
             }
         }
     }
