@@ -18,24 +18,6 @@ namespace UDPNumberSender
             IPEndPoint RemoteIpEndPoint = new IPEndPoint(ip, 9999); //
             //udpClient.Connect(RemoteIpEndPoint); //
 
-            //Console.Write("State name: ");
-            //String name = Console.ReadLine();
-
-            //for (int i = 0; i < 5000; i++)
-            //{
-            //    Byte[] sendBytes = Encoding.ASCII.GetBytes(name + " " + number + " hello");
-
-            //    udpClient.Send(sendBytes, sendBytes.Length); //, (RemoteEndPoint NOT in 1-1 communication);
-            //    Byte[] receiveBytes = udpClient.Receive(ref RemoteIpEndPoint);
-            //    //Client is now activated");
-
-            //    string receivedData = Encoding.ASCII.GetString(receiveBytes);
-            //    Console.WriteLine(receivedData);
-            //    number++;
-
-            //    Thread.Sleep(100);
-            //}
-
             while (true)
             {
                 Console.WriteLine(number);
